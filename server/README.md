@@ -1,6 +1,6 @@
 # NLW Agents - Server
 
-Este é o backend do projeto **NLW Agents**, desenvolvido durante a 16ª edição do evento Next Level Week da [Rocketseat](https://rocketseat.com.br).
+Este é o backend do projeto **NLW Agents**, desenvolvido durante a 20ª edição do evento Next Level Week da [Rocketseat](https://rocketseat.com.br).
 
 A aplicação consiste em um servidor robusto para gerenciar salas de chat e interações, utilizando um stack moderno e performático.
 
@@ -18,10 +18,11 @@ Este projeto foi construído com as seguintes tecnologias:
 
 ## 🚀 Funcionalidades
 
-O servidor atualmente implementa os seguintes endpoints:
+O servidor atualmente implementa as seguintes funcionalidades:
 
 - **Verificação de Saúde**: Um endpoint para verificar se a API está no ar.
-- **Listagem de Salas**: Um endpoint para obter a lista de salas disponíveis.
+- **Criação e Listagem de Salas**: Endpoints para criar novas salas e listar as existentes.
+- **Criação e Listagem de Perguntas**: Endpoints para criar e listar perguntas dentro de uma sala específica.
 
 ## ⚙️ Configuração do Ambiente
 
@@ -93,6 +94,12 @@ O servidor estará disponível em `http://localhost:3333`.
 Você pode testar os endpoints usando o arquivo `client.http` ou sua ferramenta de API preferida.
 
 - `GET /health`
-  - Retorna o status da aplicação.
+  - **Descrição**: Retorna o status da aplicação.
 - `GET /rooms`
-  - Retorna a lista de salas disponíveis.
+  - **Descrição**: Retorna a lista de salas disponíveis.
+- `POST /room`
+  - **Descrição**: Cria uma nova sala.
+- `GET /room/:roomId/questions`
+  - **Descrição**: Lista as perguntas de uma sala específica.
+- `POST /rooms/:roomId/questions`
+  - **Descrição**: Cria uma nova pergunta em uma sala específica.
