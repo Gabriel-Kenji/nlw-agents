@@ -1,10 +1,19 @@
 # NLW Agents - Web
 
-Este é o front-end do projeto desenvolvido durante a **Next Level Week (NLW) Agents**, um evento online e gratuito promovido pela [Rocketseat](https://www.rocketseat.com.br/).
+Este é o front-end do projeto de Perguntas e Respostas com I.A. desenvolvido durante a **Next Level Week (NLW) Agents**, um evento online e gratuito promovido pela [Rocketseat](https://www.rocketseat.com.br/).
 
-A aplicação consiste em um sistema de salas, permitindo que os usuários visualizem as salas disponíveis e acessem uma sala específica para interagir.
+A aplicação consiste em um sistema onde usuários podem criar salas, fazer perguntas e interagir com respostas.
 
-## ✨ Tecnologias
+## ✨ Funcionalidades
+
+- **Criação de Salas**: Usuários podem criar novas salas fornecendo um nome (com no mínimo 3 caracteres) e uma descrição opcional. O formulário utiliza `react-hook-form` para gerenciamento de estado e `zod` para validação.
+- **Listagem de Salas**: A página inicial exibe uma lista com as salas criadas recentemente, mostrando:
+  - O nome da sala.
+  - Há quanto tempo foi criada (utilizando `dayjs`).
+  - A quantidade de perguntas já feitas.
+- **Página da Sala**: Cada sala possui uma página dedicada (`/room/:id`) onde os usuários podem visualizar as perguntas existentes e submeter novas questões.
+
+## 🚀 Tecnologias
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
